@@ -15,8 +15,6 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Yudit is a unicode text editor for the X Window System. It does not
