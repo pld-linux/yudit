@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/yudit
 %{_datadir}/yudit/data
 %{_datadir}/yudit/fonts
-%{_datadir}/yudit/src 
+%{_datadir}/yudit/src
 %{_applnkdir}/Editors/yudit.desktop
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
