@@ -1,7 +1,7 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.4.8
+Version:	2.5.2
 Release:	1
 Epoch:		1
 Group:		Applications/Editors
@@ -62,7 +62,9 @@ Exec=yudit
 Icon=yudit.png
 EOF
 
-gzip -9nf CHANGELOG.TXT COPYING FAQ.TXT README.TXT TODO.TXT doc/*.utf8 doc/problems/*
+gzip -9nf CHANGELOG.TXT COPYING.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT doc/*.utf8 doc/problems/*
+gzip -9nf doc/*/FAQ.TXT
+rm -f doc/*/FAQ.TXT.in
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -70,6 +72,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz doc/*.gz doc/problems/*.gz
+%lang(cz) %doc doc/cz
+%lang(de) %doc doc/de
+%lang(es) %doc doc/es
+%lang(fi) %doc doc/fi
+%lang(hu) %doc doc/hu
+%lang(ja) %doc doc/ja
+%lang(yi) %doc doc/yi
+
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 
@@ -77,21 +87,24 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/yudit/data
 %{_datadir}/yudit/fonts
 %{_datadir}/yudit/src 
-%{_datadir}/yudit/doc 
 %{_applnkdir}/Editors/yudit.desktop
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
+%lang(az) %{_datadir}/yudit/locale/ar
 %lang(az) %{_datadir}/yudit/locale/az
 %lang(bg) %{_datadir}/yudit/locale/bg
+%lang(az) %{_datadir}/yudit/locale/cz
 %lang(de) %{_datadir}/yudit/locale/de
 %lang(en) %{_datadir}/yudit/locale/en
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
+%lang(az) %{_datadir}/yudit/locale/hi
 %lang(hu) %{_datadir}/yudit/locale/hu
 %lang(ja) %{_datadir}/yudit/locale/ja
 %lang(sl) %{_datadir}/yudit/locale/sl
 %lang(sr) %{_datadir}/yudit/locale/sr
+%lang(az) %{_datadir}/yudit/locale/ta
 %lang(yi) %{_datadir}/yudit/locale/yi
 %dir %{_datadir}/yudit/config
 %config %{_datadir}/yudit/config/*
