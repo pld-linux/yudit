@@ -8,6 +8,7 @@ License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
 Group:		Applications/Editors
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
+# Source0-md5:	618e4e17b0375c738c45f4d40580f637
 Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
