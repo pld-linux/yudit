@@ -1,8 +1,8 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.6
-Release:	3
+Version:	2.6.4
+Release:	1
 Epoch:		1
 License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
@@ -52,7 +52,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
-rm -rf doc/cz doc/??/FAQ.TXT.in
+rm -rf doc/??/FAQ.TXT.in
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -62,12 +62,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
 %doc doc/*.utf8 doc/problems 
 %lang(bg) %doc doc/bg
-#%lang(cs) %doc doc/cz
 %lang(de) %doc doc/de
 %lang(es) %doc doc/es
 %lang(fi) %doc doc/fi
 %lang(hu) %doc doc/hu
 %lang(ja) %doc doc/ja
+%lang(ko) %doc doc/ja
+%lang(vi) %doc doc/ja
 %lang(yi) %doc doc/yi
 %lang(zh) %doc doc/zh
 
@@ -82,19 +83,25 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
 %{_datadir}/yudit/locale/en
-%lang(az) %{_datadir}/yudit/locale/ar
-%lang(ar) %{_datadir}/yudit/locale/az
+%lang(am) %{_datadir}/yudit/locale/am
+%lang(ar) %{_datadir}/yudit/locale/ar
+%lang(az) %{_datadir}/yudit/locale/az
 %lang(bg) %{_datadir}/yudit/locale/bg
+%lang(bn) %{_datadir}/yudit/locale/bn
 %lang(de) %{_datadir}/yudit/locale/de
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
 %lang(hi) %{_datadir}/yudit/locale/hi
 %lang(hu) %{_datadir}/yudit/locale/hu
+%lang(ko) %{_datadir}/yudit/locale/ko
 %lang(ja) %{_datadir}/yudit/locale/ja
 %lang(sl) %{_datadir}/yudit/locale/sl
 %lang(sr) %{_datadir}/yudit/locale/sr
 %lang(ta) %{_datadir}/yudit/locale/ta
+%lang(ur) %{_datadir}/yudit/locale/ur
+%lang(uk) %{_datadir}/yudit/locale/uk
+%lang(vi) %{_datadir}/yudit/locale/vi
 %lang(yi) %{_datadir}/yudit/locale/yi
 %lang(zh) %{_datadir}/yudit/locale/zh
 %dir %{_datadir}/yudit/config
