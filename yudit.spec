@@ -1,14 +1,17 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.5.2
+Version:	2.5.4
 Release:	1
 Epoch:		1
-Group:		Applications/Editors
 License:	GPL
-Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
+Group:		Applications/Editors
+Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,25 +45,17 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
 
-#install -d $RPM_BUILD_ROOT%{_prefix}
 %{__make} install \
 	 DESTDIR=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Editors
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
-cat >$RPM_BUILD_ROOT%{_applnkdir}/Editors/yudit.desktop <<EOF
-[Desktop Entry]
-Name=Yudit (Unicode editor)
-Type=Application
-Description=The Yudit Unicode editor
-Exec=yudit
-Icon=yudit.png
-EOF
+gzip -9nf CHANGELOG.TXT COPYING.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT \
+	doc/*.utf8 doc/problems/* doc/*/FAQ.TXT
 
-gzip -9nf CHANGELOG.TXT COPYING.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT doc/*.utf8 doc/problems/*
-gzip -9nf doc/*/FAQ.TXT
 rm -f doc/*/FAQ.TXT.in
 
 %clean
