@@ -1,15 +1,19 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.4.8.beta7
+Version:	2.4.8
 Release:	1
+Epoch:		1
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
 License:	GPL
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
+Vendor:		Gaspar Sinai <gsinai@yudit.org>
 BuildRequires:	XFree86-devel
+BuildRequires:	gettext-devel
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
@@ -21,7 +25,6 @@ need localized environment or unicode fonts. It supports simultanious
 processing of many languages, input methods, conversions for local
 character standards. This package includes X11 editor interface, shell
 conversion utilities and it also has support for postscript printing.
-GNU (C) Gaspar Sinai <gsinai@yudit.org>
 
 %description -l pl
 Yudit jest edytorem tekstu w standardzie unicde dla systemu X Window.
@@ -30,21 +33,20 @@ jednoczesne przetwarzanie wielu jêzyków, sposobów wprowadzania tekstu,
 konwersji z lokalnych standardów kodowania. Pakiet tan zawiera
 interferjs edytora dla X11, narzêdzia do konwersji, a tak¿e wspiera
 drukowanie PostScript.
-GNU (C) Gaspar Sinai <gsinai@yudit.org>
 
 %prep
 %setup -q
 
 %build
+aclocal
 autoconf
-%configure \
-	--prefix=%{_prefix} \
-	--bindir=%{_bindir}
+%configure
 %{__make}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_prefix}
+#install -d $RPM_BUILD_ROOT%{_prefix}
 %{__make} install \
 	 DESTDIR=$RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Editors
@@ -68,11 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz doc/*.gz doc/problems/*.gz
-%attr(755,root,root) %{_bindir}/uniconv
-%attr(755,root,root) %{_bindir}/uniprint
-%attr(755,root,root) %{_bindir}/yudit
-%attr(755,root,root) %{_bindir}/mytool
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man?/*
 
 %dir %{_datadir}/yudit
 %{_datadir}/yudit/data
@@ -87,6 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %{_datadir}/yudit/locale/de
 %lang(en) %{_datadir}/yudit/locale/en
 %lang(es) %{_datadir}/yudit/locale/es
+%lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
 %lang(hu) %{_datadir}/yudit/locale/hu
 %lang(ja) %{_datadir}/yudit/locale/ja
