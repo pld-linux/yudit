@@ -13,7 +13,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
@@ -53,17 +52,13 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
-gzip -9nf CHANGELOG.TXT COPYING.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT \
-	doc/*.utf8 doc/problems/* doc/*/FAQ.TXT
-
-rm -f doc/*/FAQ.TXT.in
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc/*.gz doc/problems/*.gz
+%doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
+%doc doc/*.utf8 doc/problems/* doc/*/FAQ.TXT
 %lang(bg) %doc doc/bg
 %lang(cz) %doc doc/cz
 %lang(de) %doc doc/de
