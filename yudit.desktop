@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Yudit
+Comment=The Yudit Unicode editor
+Comment[pl]=Edytor tekstu u¿ywaj±cy Unicode
+Icon=yudit.png
+Exec=yudit
+Type=Application
+# vi: encoding=utf-8
