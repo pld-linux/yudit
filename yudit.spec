@@ -1,14 +1,15 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.6.4
-Release:	1
+Version:	2.7.6
+%define	bver	beta2
+Release:	0.%{bver}.1
 Epoch:		1
 License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
 Group:		Applications/Editors
-Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
-# Source0-md5:	618e4e17b0375c738c45f4d40580f637
+Source0:	http://yudit.org/download/%{name}-%{version}.%{bver}.tar.gz
+# Source0-md5:	e83b524172af7945b568d4c387672719
 Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -33,12 +34,13 @@ interferjs edytora dla X11, narzêdzia do konwersji, a tak¿e wspiera
 drukowanie PostScript.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}.%{bver}
 
 %build
 %{__aclocal}
 %{__autoconf}
 %configure
+
 %{__make}
 
 %install
@@ -59,15 +61,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
-%doc doc/*.utf8 doc/problems 
+%doc doc/*.utf8 doc/problems doc/HOWTO-*.txt
 %lang(bg) %doc doc/bg
+%lang(cs) %doc doc/cs
 %lang(de) %doc doc/de
 %lang(es) %doc doc/es
 %lang(fi) %doc doc/fi
 %lang(hu) %doc doc/hu
 %lang(ja) %doc doc/ja
-%lang(ko) %doc doc/ja
-%lang(vi) %doc doc/ja
+%lang(ko) %doc doc/ko
+%lang(ru) %doc doc/ru
+%lang(sr) %doc doc/sr
+%lang(vi) %doc doc/vi
 %lang(yi) %doc doc/yi
 %lang(zh) %doc doc/zh
 
@@ -87,7 +92,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(az) %{_datadir}/yudit/locale/az
 %lang(bg) %{_datadir}/yudit/locale/bg
 %lang(bn) %{_datadir}/yudit/locale/bn
+%lang(cs) %{_datadir}/yudit/locale/cs
 %lang(de) %{_datadir}/yudit/locale/de
+%lang(el) %{_datadir}/yudit/locale/el
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
@@ -95,6 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %{_datadir}/yudit/locale/hu
 %lang(ko) %{_datadir}/yudit/locale/ko
 %lang(ja) %{_datadir}/yudit/locale/ja
+%lang(mn) %{_datadir}/yudit/locale/mn
+%lang(pl) %{_datadir}/yudit/locale/pl
+%lang(ru) %{_datadir}/yudit/locale/ru
 %lang(sl) %{_datadir}/yudit/locale/sl
 %lang(sr) %{_datadir}/yudit/locale/sr
 %lang(ta) %{_datadir}/yudit/locale/ta
