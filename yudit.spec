@@ -2,7 +2,7 @@ Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
 Version:	2.6
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
@@ -52,15 +52,17 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
 
+rm -rf doc/cz doc/??/FAQ.TXT.in
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
-%doc doc/*.utf8 doc/problems/* doc/*/FAQ.TXT
+%doc doc/*.utf8 doc/problems 
 %lang(bg) %doc doc/bg
-%lang(cs) %doc doc/cz
+#%lang(cs) %doc doc/cz
 %lang(de) %doc doc/de
 %lang(es) %doc doc/es
 %lang(fi) %doc doc/fi
