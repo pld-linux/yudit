@@ -79,11 +79,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Editors/yudit.desktop
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
+%{_datadir}/yudit/locale/en
 %lang(az) %{_datadir}/yudit/locale/ar
 %lang(ar) %{_datadir}/yudit/locale/az
 %lang(bg) %{_datadir}/yudit/locale/bg
 %lang(de) %{_datadir}/yudit/locale/de
-%lang(en) %{_datadir}/yudit/locale/en
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
