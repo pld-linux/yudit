@@ -27,7 +27,7 @@ conversion utilities and it also has support for postscript printing.
 
 %description -l pl
 Yudit jest edytorem tekstu w standardzie unicde dla systemu X Window.
-Nie wymaga zloakalizowanego ¶rodowiska, ani fontów unicde. Wspiera
+Nie wymaga zloakalizowanego ¶rodowiska, ani fontów unicode. Wspiera
 jednoczesne przetwarzanie wielu jêzyków, sposobów wprowadzania tekstu,
 konwersji z lokalnych standardów kodowania. Pakiet tan zawiera
 interferjs edytora dla X11, narzêdzia do konwersji, a tak¿e wspiera
