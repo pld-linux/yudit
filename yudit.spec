@@ -8,7 +8,7 @@ Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
 License:	GPL
-Source0:	http://yudit.org/download/{name}-%{version}.tar.gz
+Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
