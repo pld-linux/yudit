@@ -2,7 +2,7 @@ Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
 Version:	2.6
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
 %doc doc/*.utf8 doc/problems/* doc/*/FAQ.TXT
 %lang(bg) %doc doc/bg
-%lang(cz) %doc doc/cz
+%lang(cs) %doc doc/cz
 %lang(de) %doc doc/de
 %lang(es) %doc doc/es
 %lang(fi) %doc doc/fi
