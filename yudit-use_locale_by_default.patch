@@ -1,0 +1,15 @@
+--- yudit-2.7.6.beta2/yudit.properties.in~	Sun Aug 31 13:23:36 2003
++++ yudit-2.7.6.beta2/yudit.properties.in	Sun Aug 31 13:23:36 2003
+@@ -82,10 +82,10 @@
+ # zh  Chinese/HongKong  
+ #
+ # If you leave it empty English is used.
+-# If you specify yudit.default.language=locale, then LANG environment 
++# If you specify yudit.default.language=default, then LANG environment 
+ #    variable is used. Be careful - you may not have the font!
+ #
+-yudit.default.language=
++yudit.default.language=default
+ 
+ #
+ # Things will be put on X11 clipboard with this encoding.
