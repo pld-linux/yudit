@@ -1,7 +1,7 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.4.8.beta6
+Version:	2.4.8.beta7
 Release:	1
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
