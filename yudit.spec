@@ -1,5 +1,5 @@
-Summary:	Unicode Text Editor
-Summary(pl):	Edytor tekstu Unicode
+Summary:	Unicode text editor
+Summary(pl):	Edytor tekstu unicode
 Name:		yudit
 Version:	2.7.6
 %define	bver	beta2
@@ -28,7 +28,7 @@ character standards. This package includes X11 editor interface, shell
 conversion utilities and it also has support for postscript printing.
 
 %description -l pl
-Yudit jest edytorem tekstu w standardzie unicde dla systemu X Window.
+Yudit jest edytorem tekstu w standardzie unicode dla systemu X Window.
 Nie wymaga zloakalizowanego ¶rodowiska, ani fontów unicode. Wspiera
 jednoczesne przetwarzanie wielu jêzyków, sposobów wprowadzania tekstu,
 konwersji z lokalnych standardów kodowania. Pakiet tan zawiera
