@@ -6,5 +6,5 @@ Icon=yudit.png
 Exec=yudit
 Type=Application
 Encoding=UTF-8
-Categories=Office;WordProcessor;
+Categories=Utility;TextEditor;
 # vi: encoding=utf-8
