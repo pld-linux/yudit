@@ -1,7 +1,7 @@
 Summary:	Unicode Text Editor
 Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
-Version:	2.5.4
+Version:	2.6
 Release:	1
 Epoch:		1
 License:	GPL
@@ -64,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz doc/*.gz doc/problems/*.gz
+%lang(bg) %doc doc/bg
 %lang(cz) %doc doc/cz
 %lang(de) %doc doc/de
 %lang(es) %doc doc/es
@@ -71,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %doc doc/hu
 %lang(ja) %doc doc/ja
 %lang(yi) %doc doc/yi
+%lang(zh) %doc doc/zh
 
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
@@ -83,20 +85,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
 %lang(az) %{_datadir}/yudit/locale/ar
-%lang(az) %{_datadir}/yudit/locale/az
+%lang(ar) %{_datadir}/yudit/locale/az
 %lang(bg) %{_datadir}/yudit/locale/bg
-%lang(az) %{_datadir}/yudit/locale/cz
 %lang(de) %{_datadir}/yudit/locale/de
 %lang(en) %{_datadir}/yudit/locale/en
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
-%lang(az) %{_datadir}/yudit/locale/hi
+%lang(hi) %{_datadir}/yudit/locale/hi
 %lang(hu) %{_datadir}/yudit/locale/hu
 %lang(ja) %{_datadir}/yudit/locale/ja
 %lang(sl) %{_datadir}/yudit/locale/sl
 %lang(sr) %{_datadir}/yudit/locale/sr
-%lang(az) %{_datadir}/yudit/locale/ta
+%lang(ta) %{_datadir}/yudit/locale/ta
 %lang(yi) %{_datadir}/yudit/locale/yi
+%lang(zh) %{_datadir}/yudit/locale/zh
 %dir %{_datadir}/yudit/config
 %config %{_datadir}/yudit/config/*
