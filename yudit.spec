@@ -3,7 +3,7 @@ Summary(pl):	Edytor tekstu Unicode
 Name:		yudit
 Version:	2.7.6
 %define	bver	beta2
-Release:	0.%{bver}.1
+Release:	0.%{bver}.2
 Epoch:		1
 License:	GPL
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
@@ -11,12 +11,14 @@ Group:		Applications/Editors
 Source0:	http://yudit.org/download/%{name}-%{version}.%{bver}.tar.gz
 # Source0-md5:	e83b524172af7945b568d4c387672719
 Source1:	%{name}.desktop
+Patch0:		%{name}-use_locale_by_default.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautocompressdoc	FAQ.TXT
 
 %description
 Yudit is a unicode text editor for the X Window System. It does not
@@ -35,6 +37,7 @@ drukowanie PostScript.
 
 %prep
 %setup -q -n %{name}-%{version}.%{bver}
+%patch -p1
 
 %build
 %{__aclocal}
@@ -52,6 +55,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
 
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
+ln -sf ../../doc $RPM_BUILD_ROOT%{_datadir}/yudit/doc
 
 rm -rf doc/??/FAQ.TXT.in
 
@@ -74,13 +78,14 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sr) %doc doc/sr
 %lang(vi) %doc doc/vi
 %lang(yi) %doc doc/yi
-%lang(zh) %doc doc/zh
+%lang(zh_HK,zh_TW) %doc doc/zh
 
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 
 %dir %{_datadir}/yudit
 %{_datadir}/yudit/data
+%{_datadir}/yudit/doc
 %{_datadir}/yudit/fonts
 %{_datadir}/yudit/src
 %{_applnkdir}/Editors/yudit.desktop
@@ -112,6 +117,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(uk) %{_datadir}/yudit/locale/uk
 %lang(vi) %{_datadir}/yudit/locale/vi
 %lang(yi) %{_datadir}/yudit/locale/yi
-%lang(zh) %{_datadir}/yudit/locale/zh
+%lang(zh_HK,zh_TW) %{_datadir}/yudit/locale/zh
 %dir %{_datadir}/yudit/config
 %config %{_datadir}/yudit/config/*
