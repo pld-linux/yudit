@@ -5,9 +5,6 @@ Version:	2.5.2
 Release:	1
 Epoch:		1
 Group:		Applications/Editors
-Group(de):	Applikationen/Editors
-Group(pl):	Aplikacje/Edytory
-Group(pt):	Aplicações/Editores
 License:	GPL
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.gz
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
