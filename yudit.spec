@@ -48,13 +48,13 @@ drukowanie PostScript.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Editors,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	 DESTDIR=$RPM_BUILD_ROOT
 
 install gnome-yudit.png $RPM_BUILD_ROOT%{_pixmapsdir}/yudit.png
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Editors
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 ln -sf ../../doc $RPM_BUILD_ROOT%{_datadir}/yudit/doc
 
 rm -rf doc/??/FAQ.TXT.in
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/yudit/doc
 %{_datadir}/yudit/fonts
 %{_datadir}/yudit/src
-%{_applnkdir}/Editors/yudit.desktop
+%{_desktopdir}/yudit.desktop
 %{_pixmapsdir}/yudit.png
 %dir %{_datadir}/yudit/locale
 %{_datadir}/yudit/locale/en
