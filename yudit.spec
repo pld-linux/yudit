@@ -1,21 +1,20 @@
 Summary:	Unicode text editor
 Summary(pl):	Edytor tekstu unicode
 Name:		yudit
-Version:	2.7.6
-%define	bver	beta2
-Release:	0.%{bver}.2
+Version:	2.7.8
+Release:	1
 Epoch:		1
-License:	GPL
+License:	GPL v2
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
-Group:		Applications/Editors
-Source0:	http://yudit.org/download/%{name}-%{version}.%{bver}.tar.gz
-# Source0-md5:	e83b524172af7945b568d4c387672719
+Group:		X11/Applications/Editors
+Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
+# Source0-md5:	48c1dc0c02c832a86abe9f6ec4cabdd6
 Source1:	%{name}.desktop
 Patch0:		%{name}-use_locale_by_default.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-devel >= 0.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautocompressdoc	FAQ.TXT
@@ -36,7 +35,7 @@ interferjs edytora dla X11, narzêdzia do konwersji, a tak¿e wspiera
 drukowanie PostScript.
 
 %prep
-%setup -q -n %{name}-%{version}.%{bver}
+%setup -q
 %patch -p1
 
 %build
@@ -64,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG.TXT FAQ.TXT README.TXT TODO.TXT BUGS.TXT
+%doc CHANGELOG.TXT FAQ.TXT NEWS.TXT README.TXT TODO.TXT *BUGS.TXT
 %doc doc/*.utf8 doc/problems doc/HOWTO-*.txt
 %lang(bg) %doc doc/bg
 %lang(cs) %doc doc/cs
@@ -72,10 +71,12 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %doc doc/es
 %lang(fi) %doc doc/fi
 %lang(hu) %doc doc/hu
+%lang(it) %doc doc/it
 %lang(ja) %doc doc/ja
 %lang(ko) %doc doc/ko
 %lang(ru) %doc doc/ru
 %lang(sr) %doc doc/sr
+%lang(te) %doc doc/te
 %lang(vi) %doc doc/vi
 %lang(yi) %doc doc/yi
 %lang(zh_HK,zh_TW) %doc doc/zh
@@ -103,18 +104,22 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{_datadir}/yudit/locale/es
 %lang(fi) %{_datadir}/yudit/locale/fi
 %lang(fr) %{_datadir}/yudit/locale/fr
+%lang(ga) %{_datadir}/yudit/locale/ga
+%lang(gu) %{_datadir}/yudit/locale/gu
 %lang(hi) %{_datadir}/yudit/locale/hi
 %lang(hu) %{_datadir}/yudit/locale/hu
-%lang(ko) %{_datadir}/yudit/locale/ko
 %lang(ja) %{_datadir}/yudit/locale/ja
+%lang(ko) %{_datadir}/yudit/locale/ko
 %lang(mn) %{_datadir}/yudit/locale/mn
+%lang(mr) %{_datadir}/yudit/locale/mr
+%lang(pa) %{_datadir}/yudit/locale/pa
 %lang(pl) %{_datadir}/yudit/locale/pl
 %lang(ru) %{_datadir}/yudit/locale/ru
 %lang(sl) %{_datadir}/yudit/locale/sl
 %lang(sr) %{_datadir}/yudit/locale/sr
 %lang(ta) %{_datadir}/yudit/locale/ta
-%lang(ur) %{_datadir}/yudit/locale/ur
 %lang(uk) %{_datadir}/yudit/locale/uk
+%lang(ur) %{_datadir}/yudit/locale/ur
 %lang(vi) %{_datadir}/yudit/locale/vi
 %lang(yi) %{_datadir}/yudit/locale/yi
 %lang(zh_HK,zh_TW) %{_datadir}/yudit/locale/zh
