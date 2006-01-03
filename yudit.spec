@@ -11,6 +11,7 @@ Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	48c1dc0c02c832a86abe9f6ec4cabdd6
 Source1:	%{name}.desktop
 Patch0:		%{name}-use_locale_by_default.patch
+URL:		http://yudit.org/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
