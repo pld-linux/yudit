@@ -1,5 +1,5 @@
 Summary:	Unicode text editor
-Summary(pl):	Edytor tekstu unicode
+Summary(pl.UTF-8):   Edytor tekstu unicode
 Name:		yudit
 Version:	2.7.8
 Release:	1
@@ -27,12 +27,12 @@ processing of many languages, input methods, conversions for local
 character standards. This package includes X11 editor interface, shell
 conversion utilities and it also has support for postscript printing.
 
-%description -l pl
+%description -l pl.UTF-8
 Yudit jest edytorem tekstu w standardzie unicode dla systemu X Window.
-Nie wymaga zloakalizowanego 秗odowiska, ani font體 unicode. Wspiera
-jednoczesne przetwarzanie wielu j陑yk體, sposob體 wprowadzania tekstu,
-konwersji z lokalnych standard體 kodowania. Pakiet tan zawiera
-interferjs edytora dla X11, narz阣zia do konwersji, a tak縠 wspiera
+Nie wymaga zloakalizowanego 艣rodowiska, ani font贸w unicode. Wspiera
+jednoczesne przetwarzanie wielu j臋zyk贸w, sposob贸w wprowadzania tekstu,
+konwersji z lokalnych standard贸w kodowania. Pakiet tan zawiera
+interferjs edytora dla X11, narz臋dzia do konwersji, a tak偶e wspiera
 drukowanie PostScript.
 
 %prep
