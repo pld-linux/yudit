@@ -1,5 +1,5 @@
 Summary:	Unicode text editor
-Summary(pl.UTF-8):   Edytor tekstu unicode
+Summary(pl.UTF-8):	Edytor tekstu unicode
 Name:		yudit
 Version:	2.7.8
 Release:	1
