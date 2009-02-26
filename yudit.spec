@@ -1,18 +1,18 @@
 Summary:	Unicode text editor
 Summary(pl.UTF-8):	Edytor tekstu unicode
 Name:		yudit
-Version:	2.7.8
+Version:	2.9.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
 Group:		X11/Applications/Editors
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	48c1dc0c02c832a86abe9f6ec4cabdd6
+# Source0-md5:	3454f3798173acf0a54cef84a9406c17
 Source1:	%{name}.desktop
 Patch0:		%{name}-use_locale_by_default.patch
 URL:		http://yudit.org/
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-xserver-server-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel >= 0.10
@@ -44,7 +44,7 @@ drukowanie PostScript.
 %{__autoconf}
 %configure
 
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -123,6 +123,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ur) %{_datadir}/yudit/locale/ur
 %lang(vi) %{_datadir}/yudit/locale/vi
 %lang(yi) %{_datadir}/yudit/locale/yi
+%lang(zh_CN) %{_datadir}/yudit/locale/zh_CN
 %lang(zh_HK,zh_TW) %{_datadir}/yudit/locale/zh
 %dir %{_datadir}/yudit/config
 %config %{_datadir}/yudit/config/*
+%dir %{_datadir}/yudit/syntax
+%{_datadir}/yudit/syntax/README.TXT
