@@ -1,11 +1,8 @@
---- yudit-2.7.6.beta2/yudit.properties.in~	Sun Aug 31 13:23:36 2003
-+++ yudit-2.7.6.beta2/yudit.properties.in	Sun Aug 31 13:23:36 2003
-@@ -82,10 +82,10 @@
- # zh  Chinese/HongKong  
- #
- # If you leave it empty English is used.
--# If you specify yudit.default.language=locale, then LANG environment 
-+# If you specify yudit.default.language=default, then LANG environment 
+diff -burNp yudit-2.9.0/yudit.properties yudit-2.9.0-dud/yudit.properties
+--- yudit-2.9.0/yudit.properties	2007-12-22 07:27:13.000000000 +0100
++++ yudit-2.9.0-dud/yudit.properties	2009-02-26 10:26:11.516362164 +0100
+@@ -107,7 +107,7 @@ yudit.freehand.converter=kanji
+ # If you specify yudit.default.language=default, then LANG environment 
  #    variable is used. Be careful - you may not have the font!
  #
 -yudit.default.language=
