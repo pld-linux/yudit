@@ -12,10 +12,10 @@ Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-use_locale_by_default.patch
 URL:		http://yudit.org/
-BuildRequires:	xorg-xserver-server-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel >= 0.10
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautocompressdoc	FAQ.TXT
