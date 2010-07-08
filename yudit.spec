@@ -1,14 +1,14 @@
 Summary:	Unicode text editor
 Summary(pl.UTF-8):	Edytor tekstu unicode
 Name:		yudit
-Version:	2.9.0
+Version:	2.9.2
 Release:	1
 Epoch:		1
 License:	GPL v2
 Vendor:		Gaspar Sinai <gsinai@yudit.org>
 Group:		X11/Applications/Editors
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	3454f3798173acf0a54cef84a9406c17
+# Source0-md5:	c50d2ccc28f42572865354dec71effe2
 Source1:	%{name}.desktop
 Patch0:		%{name}-use_locale_by_default.patch
 URL:		http://yudit.org/
