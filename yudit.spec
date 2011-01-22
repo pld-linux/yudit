@@ -5,7 +5,6 @@ Version:	2.9.2
 Release:	1
 Epoch:		1
 License:	GPL v2
-Vendor:		Gaspar Sinai <gsinai@yudit.org>
 Group:		X11/Applications/Editors
 Source0:	http://yudit.org/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	c50d2ccc28f42572865354dec71effe2
@@ -15,6 +14,7 @@ URL:		http://yudit.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel >= 0.10
+BuildRequires:	libstdc++-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
