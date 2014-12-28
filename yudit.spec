@@ -13,7 +13,7 @@ Patch0:		%{name}-use_locale_by_default.patch
 URL:		http://yudit.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel >= 0.10
+BuildRequires:	gettext-tools >= 0.10
 BuildRequires:	libstdc++-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
